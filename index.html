@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO & GEO Meta Tags -->
+  <title>مولّد رابط واتساب | أنشئ رابط واتساب مخصص بسهولة</title>
+  <meta name="description" content="أداة احترافية لإنشاء روابط واتساب مباشرة مع تنسيق النص بالخط السميك والمائل والصور والمزيد. جرّب الآن مجاناً." />
+  <meta name="keywords" content="رابط واتساب, واتساب, مولد رابط, whatsapp link generator, رسالة واتساب, api whatsapp" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="WhatsApp Link Generator" />
+  <meta name="geo.region" content="SA" />
+  <meta name="geo.placename" content="Saudi Arabia" />
+  <meta name="language" content="Arabic" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="مولّد رابط واتساب الاحترافي" />
+  <meta property="og:description" content="أنشئ روابط واتساب مخصصة مع تنسيق النص بسهولة" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_SA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="مولّد رابط واتساب الاحترافي" />
+  <meta name="twitter:description" content="أنشئ روابط واتساب مخصصة مع تنسيق النص بسهولة" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://wa-generator.app/" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "مولّد رابط واتساب",
+    "description": "أداة احترافية لإنشاء روابط واتساب مباشرة مع تنسيق النص",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "SAR" }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <style>
+    :root {
+      --green-50: #f0fdf4;
+      --green-100: #dcfce7;
+      --green-200: #bbf7d0;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-700: #15803d;
+      --green-800: #166534;
+      --green-900: #14532d;
+      --wa-green: #25D366;
+      --wa-dark: #128C7E;
+      --wa-light: #DCF8C6;
+      --surface: #0d1117;
+      --surface-2: #161b22;
+      --surface-3: #21262d;
+      --surface-4: #30363d;
+      --border: #30363d;
+      --border-2: #484f58;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --accent: #25D366;
+      --accent-glow: rgba(37, 211, 102, 0.15);
+      --accent-glow-strong: rgba(37, 211, 102, 0.35);
+      --radius: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow: 0 4px 16px rgba(0,0,0,0.5);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.6);
+      --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+      --font-main: 'Cairo', sans-serif;
+      --font-body: 'Tajawal', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--surface);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Animated BG */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 10%, rgba(37,211,102,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 90%, rgba(18,140,126,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 30% at 50% 50%, rgba(37,211,102,0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 24px 0 16px;
+      position: relative;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-icon {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      flex-shrink: 0;
+    }
+
+    .brand-icon svg { width: 28px; height: 28px; fill: white; }
+
+    .brand-text h1 {
+      font-family: var(--font-main);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .header-badge {
+      background: linear-gradient(135deg, rgba(37,211,102,0.15), rgba(18,140,126,0.1));
+      border: 1px solid rgba(37,211,102,0.3);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.75rem;
+      color: var(--wa-green);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── MAIN GRID ── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 24px;
+      padding: 16px 0 40px;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+
+    .card:hover { border-color: var(--border-2); }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(37,211,102,0.4), transparent);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .card:focus-within::before,
+    .card:hover::before { opacity: 1; }
+
+    .card-title {
+      font-family: var(--font-main);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title i { color: var(--accent); font-size: 1.1rem; }
+
+    /* ── PHONE INPUT ── */
+    .phone-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .country-code-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .country-select {
+      appearance: none;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      padding: 12px 36px 12px 14px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      min-width: 130px;
+    }
+
+    .country-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .country-code-wrap::after {
+      content: '▾';
+      position: absolute;
+      left: 10px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 0.8rem;
+    }
+
+    .input-wrap {
+      position: relative;
+      flex: 1;
+    }
+
+    .input-field {
+      width: 100%;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      padding: 12px 16px 12px 44px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .input-field::placeholder { color: var(--text-muted); }
+
+    .input-field:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 14px; top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .input-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* ── MESSAGE TOOLBAR ── */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px;
+    }
+
+    .toolbar-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--text-secondary);
+      padding: 6px 10px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex; align-items: center; gap: 5px;
+      white-space: nowrap;
+    }
+
+    .toolbar-btn:hover {
+      background: var(--surface-4);
+      border-color: var(--border-2);
+      color: var(--text-primary);
+    }
+
+    .toolbar-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .toolbar-btn i { font-size: 1rem; }
+
+    .toolbar-sep {
+      width: 1px;
+      background: var(--border);
+      margin: 2px 4px;
+      align-self: stretch;
+    }
+
+    /* ── TEXTAREA ── */
+    .textarea-wrap {
+      position: relative;
+    }
+
+    #messageInput {
+      width: 100%;
+      min-height: 140px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      padding: 14px 16px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      resize: vertical;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    #messageInput::placeholder { color: var(--text-muted); }
+
+    #messageInput:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .char-count {
+      position: absolute;
+      bottom: 10px; left: 12px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .char-count.warning { color: #f59e0b; }
+    .char-count.danger  { color: #ef4444; }
+
+    /* ── EMOJI PICKER BUTTON ── */
+    .emoji-btn {
+      position: absolute;
+      bottom: 10px; right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .emoji-btn:hover { opacity: 1; }
+
+    /* ── EMOJI GRID ── */
+    .emoji-panel {
+      display: none;
+      flex-wrap: wrap;
+      gap: 6px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px;
+      margin-top: 8px;
+      max-height: 160px;
+      overflow-y: auto;
+    }
+
+    .emoji-panel.open { display: flex; }
+
+    .emoji-item {
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 6px;
+      transition: background var(--transition);
+      line-height: 1;
+    }
+
+    .emoji-item:hover { background: var(--surface-4); }
+
+    /* ── QUICK TEMPLATES ── */
+    .templates-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .tpl-btn {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-secondary);
+      padding: 10px 12px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-align: right;
+      transition: all var(--transition);
+      line-height: 1.4;
+    }
+
+    .tpl-btn:hover {
+      border-color: var(--accent);
+      color: var(--text-primary);
+      background: rgba(37,211,102,0.05);
+    }
+
+    /* ── URL INPUT ── */
+    .url-section { margin-top: 20px; }
+
+    .url-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .url-group .input-field { direction: ltr; }
+
+    /* ── UTM PARAMS ── */
+    .utm-toggle {
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      cursor: pointer;
+      padding: 8px 0;
+      display: flex; align-items: center; gap: 6px;
+      transition: opacity var(--transition);
+    }
+    .utm-toggle:hover { opacity: 0.8; }
+
+    .utm-panel {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+
+    .utm-panel.open { display: flex; }
+
+    .utm-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .field-label {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    /* ── GENERATE BTN ── */
+    .generate-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border: none;
+      border-radius: var(--radius);
+      color: white;
+      padding: 16px;
+      font-family: var(--font-main);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    }
+
+    .generate-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .generate-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .generate-btn:active { transform: translateY(0); }
+    .generate-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .generate-btn i { font-size: 1.2rem; }
+
+    /* ── OUTPUT SECTION ── */
+    .output-section {
+      display: none;
+      margin-top: 20px;
+      animation: slideIn 0.3s ease;
+    }
+
+    .output-section.visible { display: block; }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .output-label {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .output-url {
+      background: var(--surface-3);
+      border: 1px solid rgba(37,211,102,0.3);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      word-break: break-all;
+      direction: ltr;
+      text-align: left;
+      line-height: 1.5;
+      position: relative;
+    }
+
+    .output-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .action-btn {
+      flex: 1;
+      min-width: 120px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      transition: all var(--transition);
+      font-weight: 600;
+    }
+
+    .action-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+    .action-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .action-btn.primary { background: var(--wa-green); border-color: var(--wa-green); color: white; }
+    .action-btn.primary:hover { background: var(--wa-dark); border-color: var(--wa-dark); color: white; }
+
+    /* QR Code */
+    .qr-section {
+      display: none;
+      text-align: center;
+      margin-top: 16px;
+      padding: 16px;
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .qr-section.visible { display: block; }
+    #qrCanvas { border-radius: 8px; background: white; padding: 8px; }
+
+    /* ── PREVIEW PANEL ── */
+    .preview-panel {
+      position: sticky;
+      top: 20px;
+    }
+
+    .wa-phone-mock {
+      background: #1a1a2e;
+      border-radius: 36px;
+      border: 3px solid #2a2a4a;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg), 0 0 60px rgba(37,211,102,0.08);
+      position: relative;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .wa-phone-notch {
+      background: #0f0f1a;
+      height: 28px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .wa-phone-notch-dot {
+      width: 10px; height: 10px;
+      background: #2a2a4a;
+      border-radius: 50%;
+    }
+
+    .wa-chat-header {
+      background: linear-gradient(135deg, #075E54, #128C7E);
+      padding: 12px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+
+    .wa-avatar {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .wa-contact-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .wa-contact-status {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .wa-chat-body {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20 L20 0 L40 20 L20 40 Z' fill='none' stroke='rgba(255,255,255,0.02)' stroke-width='1'/%3E%3C/svg%3E");
+      background-color: #0b141a;
+      min-height: 280px;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .wa-bubble {
+      background: var(--wa-light);
+      color: #111;
+      border-radius: 12px 12px 4px 12px;
+      padding: 10px 14px;
+      max-width: 85%;
+      align-self: flex-end;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      position: relative;
+      word-break: break-word;
+      animation: bubblePop 0.3s ease;
+      direction: rtl;
+      text-align: right;
+    }
+
+    @keyframes bubblePop {
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .wa-bubble-time {
+      font-size: 0.6rem;
+      color: #667;
+      text-align: left;
+      margin-top: 4px;
+      display: flex; align-items: center; justify-content: flex-end; gap: 3px;
+    }
+
+    .wa-bubble-time svg { width: 14px; height: 14px; fill: #4fc3f7; }
+
+    .wa-empty-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.15);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .wa-empty-state i { font-size: 2.5rem; margin-bottom: 8px; }
+    .wa-empty-state p { font-size: 0.75rem; }
+
+    .wa-chat-footer {
+      background: #1f2c34;
+      padding: 8px 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    .wa-input-mock {
+      flex: 1;
+      background: #2a3942;
+      border-radius: 20px;
+      height: 36px;
+      display: flex; align-items: center; padding: 0 12px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .wa-send-mock {
+      width: 36px; height: 36px;
+      background: var(--wa-green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* Formatted text in bubble */
+    .wa-bubble b { font-weight: 700; }
+    .wa-bubble i { font-style: italic; }
+    .wa-bubble s { text-decoration: line-through; }
+    .wa-bubble code {
+      background: rgba(0,0,0,0.1);
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.85em;
+    }
+    .wa-bubble pre {
+      background: rgba(0,0,0,0.08);
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.78em;
+      white-space: pre-wrap;
+      margin: 4px 0;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 0 0 24px;
+    }
+
+    .stat-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--font-main);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── HISTORY ── */
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .history-item {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .history-item:hover { border-color: var(--accent); background: var(--accent-glow); }
+
+    .history-phone {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+      direction: ltr;
+    }
+
+    .history-msg {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .history-del {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 2px 6px;
+      border-radius: 6px;
+      transition: all var(--transition);
+      flex-shrink: 0;
+    }
+
+    .history-del:hover { background: rgba(239,68,68,0.2); color: #ef4444; }
+
+    .empty-history {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      padding: 20px;
+    }
+
+    /* ── TOAST ── */
+    .toast-container {
+      position: fixed;
+      bottom: 24px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      pointer-events: none;
+    }
+
+    .toast {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      display: flex; align-items: center; gap: 8px;
+      box-shadow: var(--shadow-lg);
+      animation: toastIn 0.3s ease, toastOut 0.3s ease 2.2s forwards;
+      white-space: nowrap;
+    }
+
+    .toast.success { border-color: rgba(37,211,102,0.4); }
+    .toast.success i { color: var(--accent); }
+    .toast.error { border-color: rgba(239,68,68,0.4); }
+    .toast.error i { color: #ef4444; }
+
+    @keyframes toastIn  { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateY(16px); } }
+
+    /* ── TABS ── */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      background: var(--surface-3);
+      border-radius: var(--radius);
+      padding: 4px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      background: none;
+      border: none;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+
+    .tab.active {
+      background: var(--surface-2);
+      color: var(--text-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab i { font-size: 0.95rem; }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── SHARE MODAL ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.85) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-family: var(--font-main);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 6px 10px;
+      font-size: 1.1rem;
+      transition: all var(--transition);
+    }
+
+    .modal-close:hover { color: var(--text-primary); border-color: var(--border-2); }
+
+    .share-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .share-item {
+      background: var(--surface-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+
+    .share-item:hover { border-color: var(--accent); background: var(--accent-glow); transform: translateY(-2px); }
+
+    .share-icon {
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .share-lbl { font-size: 0.72rem; color: var(--text-secondary); }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface-2); }
+    ::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .phone-group { flex-direction: column; }
+      .templates-grid { grid-template-columns: 1fr; }
+      .output-actions { flex-direction: column; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .share-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── ACCESSIBILITY ── */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── SWITCH ── */
+    .switch-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .switch-label { font-size: 0.85rem; color: var(--text-secondary); }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px; height: 24px;
+      flex-shrink: 0;
+    }
+
+    .switch input { opacity: 0; width: 0; height: 0; }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: var(--surface-4);
+      border-radius: 24px;
+      transition: background var(--transition);
+    }
+
+    .slider::before {
+      content: '';
+      position: absolute;
+      left: 3px; top: 3px;
+      width: 18px; height: 18px;
+      background: white;
+      border-radius: 50%;
+      transition: transform var(--transition);
+    }
+
+    input:checked + .slider { background: var(--accent); }
+    input:checked + .slider::before { transform: translateX(20px); }
+
+    /* ── LINK SHORTENER ── */
+    .short-link-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.3);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 8px;
+    }
+
+    /* ── PROGRESS ── */
+    .progress-bar {
+      height: 3px;
+      background: var(--surface-4);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--wa-green), var(--wa-dark));
+      border-radius: 3px;
+      transition: width var(--transition);
+    }
+
+    /* Pulse animation for generate button */
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+      50%       { box-shadow: 0 4px 30px rgba(37,211,102,0.7); }
+    }
+
+    .generate-btn.pulse { animation: pulse-green 1.5s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+
+<!-- Skip to main (a11y) -->
+<a href="#main-content" class="sr-only" style="top:4px;left:4px;position:fixed;z-index:9999;background:var(--accent);color:#000;padding:8px 16px;border-radius:8px;">تخطى إلى المحتوى الرئيسي</a>
+
+<div class="container">
+  <!-- ── HEADER ── -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>مولّد رابط واتساب</h1>
+          <p>أنشئ روابط واتساب احترافية في ثوانٍ</p>
+        </div>
+      </div>
+      <span class="header-badge" aria-label="مجاني ومفتوح المصدر">✦ مجاني 100%</span>
+    </div>
+  </header>
+
+  <!-- ── STATS ── -->
+  <div class="stats-strip" role="region" aria-label="إحصائيات الاستخدام">
+    <div class="stat-card">
+      <div class="stat-num" id="totalGenerated">0</div>
+      <div class="stat-lbl">رابط تم إنشاؤه</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="historyCount">0</div>
+      <div class="stat-lbl">في السجل</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="totalCopied">0</div>
+      <div class="stat-lbl">نسخة الرابط</div>
+    </div>
+  </div>
+
+  <!-- ── MAIN GRID ── -->
+  <main id="main-content">
+    <div class="main-grid">
+
+      <!-- ────── LEFT COLUMN ────── -->
+      <div class="left-col">
+
+        <!-- Phone Card -->
+        <div class="card" style="margin-bottom:16px">
+          <h2 class="card-title"><i class="ph ph-phone" aria-hidden="true"></i> رقم الهاتف</h2>
+
+          <div class="phone-group">
+            <div class="country-code-wrap">
+              <label for="countryCode" class="sr-only">كود الدولة</label>
+              <select id="countryCode" class="country-select" aria-label="اختر كود الدولة">
+                <option value="966">🇸🇦 +966</option>
+                <option value="971">🇦🇪 +971</option>
+                <option value="974">🇶🇦 +974</option>
+                <option value="965">🇰🇼 +965</option>
+                <option value="968">🇴🇲 +968</option>
+                <option value="973">🇧🇭 +973</option>
+                <option value="962">🇯🇴 +962</option>
+                <option value="961">🇱🇧 +961</option>
+                <option value="20">🇪🇬 +20</option>
+                <option value="218">🇱🇾 +218</option>
+                <option value="216">🇹🇳 +216</option>
+                <option value="213">🇩🇿 +213</option>
+                <option value="212">🇲🇦 +212</option>
+                <option value="249">🇸🇩 +249</option>
+                <option value="967">🇾🇪 +967</option>
+                <option value="1">🇺🇸 +1</option>
+                <option value="44">🇬🇧 +44</option>
+                <option value="49">🇩🇪 +49</option>
+                <option value="33">🇫🇷 +33</option>
+                <option value="91">🇮🇳 +91</option>
+                <option value="92">🇵🇰 +92</option>
+                <option value="90">🇹🇷 +90</option>
+              </select>
+            </div>
+            <div class="input-wrap">
+              <i class="ph ph-phone input-icon" aria-hidden="true"></i>
+              <label for="phoneNumber" class="sr-only">رقم الهاتف</label>
+              <input type="tel" id="phoneNumber" class="input-field"
+                placeholder="5XXXXXXXX"
+                autocomplete="tel"
+                inputmode="numeric"
+                aria-label="أدخل رقم الهاتف بدون صفر البداية"
+                aria-describedby="phone-hint" />
+            </div>
+          </div>
+          <p id="phone-hint" class="input-hint">أدخل الرقم بدون الصفر أو الكود — مثال: 920033184</p>
+
+          <!-- Progress bar for phone validation -->
+          <div class="progress-bar" aria-hidden="true">
+            <div class="progress-fill" id="phoneProgress" style="width:0%"></div>
+          </div>
+
+          <!-- Auto-format switch -->
+          <div class="switch-wrap">
+            <span class="switch-label">تنسيق الرقم تلقائياً</span>
+            <label class="switch" aria-label="تفعيل التنسيق التلقائي للرقم">
+              <input type="checkbox" id="autoFormat" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Message Card -->
+        <div class="card" style="margin-bottom:16px">
+          <h2 class="card-title"><i class="ph ph-chat-text" aria-hidden="true"></i> نص الرسالة</h2>
+
+          <!-- Tabs -->
+          <div class="tabs" role="tablist" aria-label="أدوات الرسالة">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="compose" aria-controls="compose-panel">
+              <i class="ph ph-pencil-simple" aria-hidden="true"></i> كتابة
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="templates" aria-controls="templates-panel">
+              <i class="ph ph-stack" aria-hidden="true"></i> قوالب
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="advanced" aria-controls="advanced-panel">
+              <i class="ph ph-sliders" aria-hidden="true"></i> متقدم
+            </button>
+          </div>
+
+          <!-- Compose Tab -->
+          <div id="compose-panel" class="tab-panel active" role="tabpanel" aria-labelledby="compose-tab">
+            <!-- Formatting Toolbar -->
+            <div class="toolbar" role="toolbar" aria-label="أدوات تنسيق النص">
+              <button class="toolbar-btn" onclick="wrapText('*','*')" title="خط سميك (Bold)" aria-label="تطبيق خط سميك">
+                <i class="ph ph-text-b" aria-hidden="true"></i> <span>سميك</span>
+              </button>
+              <button class="toolbar-btn" onclick="wrapText('_','_')" title="خط مائل (Italic)" aria-label="تطبيق خط مائل">
+                <i class="ph ph-text-italic" aria-hidden="true"></i> <span>مائل</span>
+              </button>
+              <button class="toolbar-btn" onclick="wrapText('~','~')" title="نص محذوف (Strikethrough)" aria-label="تطبيق نص محذوف">
+                <i class="ph ph-text-strikethrough" aria-hidden="true"></i> <span>يتوسطه</span>
+              </button>
+              <button class="toolbar-btn" onclick="wrapText('`','`')" title="كود (Code)" aria-label="تطبيق تنسيق كود">
+                <i class="ph ph-code" aria-hidden="true"></i> <span>كود</span>
+              </button>
+              <button class="toolbar-btn" onclick="wrapText('```\n','\n```')" title="كود Block" aria-label="تطبيق كود بلوك">
+                <i class="ph ph-code-block" aria-hidden="true"></i>
+              </button>
+              <div class="toolbar-sep" aria-hidden="true"></div>
+              <button class="toolbar-btn" onclick="insertText('\n• ')" title="نقطة قائمة" aria-label="إضافة نقطة قائمة">
+                <i class="ph ph-list-bullets" aria-hidden="true"></i>
+              </button>
+              <button class="toolbar-btn" onclick="insertText('\n1. ')" title="قائمة مرقمة" aria-label="إضافة قائمة مرقمة">
+                <i class="ph ph-list-numbers" aria-hidden="true"></i>
+              </button>
+              <div class="toolbar-sep" aria-hidden="true"></div>
+              <button class="toolbar-btn" onclick="insertText('🔗 ')" aria-label="إضافة رمز رابط">🔗</button>
+              <button class="toolbar-btn" onclick="insertText('\n──────────\n')" title="خط فاصل" aria-label="إضافة خط فاصل">
+                <i class="ph ph-minus" aria-hidden="true"></i>
+              </button>
+              <button class="toolbar-btn" onclick="clearMessage()" title="مسح الكل" aria-label="مسح نص الرسالة">
+                <i class="ph ph-eraser" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <!-- Textarea -->
+            <div class="textarea-wrap">
+              <label for="messageInput" class="sr-only">نص الرسالة</label>
+              <textarea id="messageInput"
+                placeholder="اكتب رسالتك هنا...&#10;استخدم شريط الأدوات لتنسيق النص"
+                aria-label="أدخل نص الرسالة"
+                aria-describedby="char-count-hint"
+                spellcheck="true"
+                autocomplete="off"></textarea>
+              <span class="char-count" id="charCount" aria-live="polite" id="char-count-hint">0 / 4096</span>
+              <button class="emoji-btn" onclick="toggleEmoji()" aria-label="فتح منتقي الرموز التعبيرية" aria-expanded="false" id="emojiToggle">😊</button>
+            </div>
+
+            <!-- Emoji Panel -->
+            <div id="emojiPanel" class="emoji-panel" role="region" aria-label="رموز تعبيرية">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Templates Tab -->
+          <div id="templates-panel" class="tab-panel" role="tabpanel" aria-labelledby="templates-tab">
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:14px;">اختر قالباً جاهزاً وعدّل عليه حسب حاجتك</p>
+            <div class="templates-grid" id="templatesGrid">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Advanced Tab -->
+          <div id="advanced-panel" class="tab-panel" role="tabpanel" aria-labelledby="advanced-tab">
+            <!-- URL in message -->
+            <div class="url-section">
+              <div class="field-label"><i class="ph ph-link" aria-hidden="true"></i> رابط مضمّن في الرسالة</div>
+              <div class="url-group">
+                <div class="input-wrap" style="flex:1">
+                  <i class="ph ph-link input-icon" aria-hidden="true"></i>
+                  <label for="urlInput" class="sr-only">الرابط</label>
+                  <input type="url" id="urlInput" class="input-field"
+                    placeholder="https://example.com"
+                    aria-label="أدخل الرابط المراد إضافته للرسالة"
+                    inputmode="url" />
+                </div>
+              </div>
+              <div class="input-hint">سيُضاف الرابط في نهاية الرسالة</div>
+            </div>
+
+            <!-- UTM Toggle -->
+            <button class="utm-toggle" onclick="toggleUTM()" aria-expanded="false" id="utmToggle">
+              <i class="ph ph-chart-line-up" aria-hidden="true"></i>
+              إضافة معاملات UTM للتتبع
+              <i class="ph ph-caret-down" aria-hidden="true" id="utmCaret"></i>
+            </button>
+
+            <div id="utmPanel" class="utm-panel" role="region" aria-label="معاملات UTM">
+              <div class="utm-row">
+                <div>
+                  <div class="field-label">UTM Source</div>
+                  <input type="text" id="utmSource" class="input-field" placeholder="whatsapp" style="direction:ltr" aria-label="UTM Source" />
+                </div>
+                <div>
+                  <div class="field-label">UTM Medium</div>
+                  <input type="text" id="utmMedium" class="input-field" placeholder="social" style="direction:ltr" aria-label="UTM Medium" />
+                </div>
+              </div>
+              <div class="utm-row">
+                <div>
+                  <div class="field-label">UTM Campaign</div>
+                  <input type="text" id="utmCampaign" class="input-field" placeholder="ramadan2025" style="direction:ltr" aria-label="UTM Campaign" />
+                </div>
+                <div>
+                  <div class="field-label">UTM Content</div>
+                  <input type="text" id="utmContent" class="input-field" placeholder="banner" style="direction:ltr" aria-label="UTM Content" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Options -->
+            <div class="switch-wrap">
+              <span class="switch-label">فتح في تطبيق واتساب مباشرة</span>
+              <label class="switch" aria-label="فتح في تطبيق واتساب">
+                <input type="checkbox" id="openApp" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="switch-wrap">
+              <span class="switch-label">استخدام wa.me بدلاً من api.whatsapp.com</span>
+              <label class="switch" aria-label="اختيار صيغة الرابط">
+                <input type="checkbox" id="useWaMe">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="generate-btn pulse" id="generateBtn" onclick="generateLink()" aria-label="إنشاء رابط واتساب">
+          <i class="ph ph-magic-wand" aria-hidden="true"></i>
+          إنشاء الرابط
+        </button>
+
+        <!-- OUTPUT -->
+        <div class="output-section" id="outputSection" role="region" aria-label="الرابط المُنشأ" aria-live="polite">
+          <div class="output-label"><i class="ph ph-link" aria-hidden="true"></i> الرابط المُنشأ</div>
+          <div class="output-url" id="outputUrl" tabindex="0" aria-label="الرابط الناتج"></div>
+
+          <div class="output-actions">
+            <button class="action-btn" onclick="copyLink()" aria-label="نسخ الرابط">
+              <i class="ph ph-copy" aria-hidden="true"></i> نسخ الرابط
+            </button>
+            <button class="action-btn primary" onclick="openLink()" aria-label="فتح في واتساب">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> فتح الرابط
+            </button>
+            <button class="action-btn" onclick="openShareModal()" aria-label="مشاركة الرابط">
+              <i class="ph ph-share-network" aria-hidden="true"></i> مشاركة
+            </button>
+            <button class="action-btn" onclick="toggleQR()" aria-label="عرض رمز QR" id="qrBtn">
+              <i class="ph ph-qr-code" aria-hidden="true"></i> QR Code
+            </button>
+          </div>
+
+          <!-- QR -->
+          <div class="qr-section" id="qrSection" aria-label="رمز QR للرابط">
+            <canvas id="qrCanvas" width="180" height="180" aria-label="رمز QR"></canvas>
+            <div style="margin-top:10px;display:flex;gap:8px;justify-content:center">
+              <button class="action-btn" onclick="downloadQR()" style="min-width:auto" aria-label="تحميل رمز QR">
+                <i class="ph ph-download-simple" aria-hidden="true"></i> تحميل QR
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ────── RIGHT COLUMN ────── -->
+      <div class="right-col">
+        <!-- Preview -->
+        <div class="card preview-panel" style="margin-bottom:16px">
+          <h2 class="card-title"><i class="ph ph-eye" aria-hidden="true"></i> معاينة الرسالة</h2>
+
+          <div class="wa-phone-mock" role="img" aria-label="معاينة رسالة واتساب">
+            <div class="wa-phone-notch">
+              <div class="wa-phone-notch-dot"></div>
+            </div>
+            <div class="wa-chat-header">
+              <div class="wa-avatar" aria-hidden="true">👤</div>
+              <div>
+                <div class="wa-contact-name" id="previewPhone">+966 920 033 184</div>
+                <div class="wa-contact-status">متاح الآن</div>
+              </div>
+            </div>
+            <div class="wa-chat-body" id="chatBody">
+              <div class="wa-empty-state" id="emptyState">
+                <i class="ph ph-chat-circle-dots" aria-hidden="true"></i>
+                <p>ستظهر معاينة رسالتك هنا</p>
+              </div>
+            </div>
+            <div class="wa-chat-footer">
+              <div class="wa-input-mock">اكتب رسالة...</div>
+              <div class="wa-send-mock" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- History -->
+        <div class="card">
+          <h2 class="card-title"><i class="ph ph-clock-counter-clockwise" aria-hidden="true"></i> آخر الروابط
+            <button onclick="clearHistory()" style="margin-right:auto;background:none;border:none;color:var(--text-muted);font-size:0.75rem;cursor:pointer;font-family:var(--font-body);" aria-label="مسح جميع السجلات">مسح الكل</button>
+          </h2>
+          <div class="history-list" id="historyList" role="list" aria-label="قائمة الروابط المحفوظة">
+            <div class="empty-history">
+              <i class="ph ph-hourglass-simple" aria-hidden="true"></i>
+              <p>لا يوجد سجل بعد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>مولّد رابط واتساب الاحترافي &copy; <span id="year"></span> &mdash;
+      <a href="https://wa.me/+201151101537" rel="noopener">تواصل معنا</a>
+    </p>
+  </footer>
+</div>
+
+<!-- Share Modal -->
+<div class="modal-overlay" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareTitle" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title" id="shareTitle">مشاركة الرابط</h3>
+      <button class="modal-close" onclick="closeShareModal()" aria-label="إغلاق نافذة المشاركة">✕</button>
+    </div>
+    <div class="share-grid">
+      <div class="share-item" onclick="shareVia('whatsapp')" role="button" tabindex="0" aria-label="مشاركة عبر واتساب">
+        <div class="share-icon" style="background:rgba(37,211,102,0.15)">💬</div>
+        <span class="share-lbl">واتساب</span>
+      </div>
+      <div class="share-item" onclick="shareVia('telegram')" role="button" tabindex="0" aria-label="مشاركة عبر تيليغرام">
+        <div class="share-icon" style="background:rgba(40,167,254,0.15)">✈️</div>
+        <span class="share-lbl">تيليغرام</span>
+      </div>
+      <div class="share-item" onclick="shareVia('twitter')" role="button" tabindex="0" aria-label="مشاركة عبر تويتر">
+        <div class="share-icon" style="background:rgba(29,161,242,0.15)">🐦</div>
+        <span class="share-lbl">تويتر/X</span>
+      </div>
+      <div class="share-item" onclick="shareVia('facebook')" role="button" tabindex="0" aria-label="مشاركة عبر فيسبوك">
+        <div class="share-icon" style="background:rgba(66,103,178,0.15)">📘</div>
+        <span class="share-lbl">فيسبوك</span>
+      </div>
+      <div class="share-item" onclick="shareVia('linkedin')" role="button" tabindex="0" aria-label="مشاركة عبر لينكد إن">
+        <div class="share-icon" style="background:rgba(0,119,181,0.15)">💼</div>
+        <span class="share-lbl">لينكد إن</span>
+      </div>
+      <div class="share-item" onclick="shareVia('email')" role="button" tabindex="0" aria-label="مشاركة عبر البريد الإلكتروني">
+        <div class="share-icon" style="background:rgba(234,67,53,0.15)">📧</div>
+        <span class="share-lbl">بريد إلكتروني</span>
+      </div>
+      <div class="share-item" onclick="shareVia('sms')" role="button" tabindex="0" aria-label="مشاركة عبر رسالة نصية">
+        <div class="share-icon" style="background:rgba(255,149,0,0.15)">💬</div>
+        <span class="share-lbl">رسالة SMS</span>
+      </div>
+      <div class="share-item" onclick="copyLink();closeShareModal();" role="button" tabindex="0" aria-label="نسخ الرابط">
+        <div class="share-icon" style="background:rgba(255,255,255,0.05)">📋</div>
+        <span class="share-lbl">نسخ الرابط</span>
+      </div>
+      <div class="share-item" onclick="nativeShare()" role="button" tabindex="0" aria-label="مشاركة عبر النظام">
+        <div class="share-icon" style="background:rgba(255,255,255,0.05)">📤</div>
+        <span class="share-lbl">مشاركة النظام</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- QR Library (simple canvas-based) -->
+<script>
+// ─── Minimal QR Code generator using a CDN-free approach ───
+// We'll use a lightweight inline implementation
+
+/*! qrcodejs | (c) 2012 davidshimjs */
+(function(){var a=function(){var b=!1;if(typeof CanvasRenderingContext2D!="undefined"){b=!0}return b}(),c=function(){if(typeof Worker!="undefined")return!0;return!1}(),d=function(){if(navigator.userAgent.indexOf("iPhone")>-1||navigator.userAgent.indexOf("Android")>-1&&navigator.userAgent.indexOf("Opera")>-1||navigator.userAgent.indexOf("BlackBerry")>-1)return!1;return!0}(),e=document.createElement("img");function f(a,b){this._bHorizontalAlignment=a;this._bVerticalAlignment=b}f.ClassName="QRCellElement";f.prototype={};var g={L:1,M:0,Q:3,H:2},h=0,i=1,j=2,k=3,l=4,m=5,n=6,o=7;function p(a,b){this.nCount=0;this.modules=null;this.nDataCount=0;this.nVersion=a;this.nErrorCorrectLevel=b}p.prototype={addData:function(a){var b=new q(a);this.qrdata=b;this.nVersion=this.nVersion||this.getBestVersion(b);this.nDataCount=this.getDataCount(this.nVersion,this.nErrorCorrectLevel);this.modules=new Array(this.nCount);this.nCount=this.nVersion*4+17;for(var c=0;c<this.nCount;c++){this.modules[c]=new Array(this.nCount);for(var d=0;d<this.nCount;d++)this.modules[c][d]=null}this.makeImpl(!1,this.getBestMaskPattern())},getBestVersion:function(a){for(var b=1;b<=40;b++){var c=t[g[this.nErrorCorrectLevel]][b-1],d=this.getDataCount(b,this.nErrorCorrectLevel);if(d>=a.getLength(b))return b}throw new Error("Too long data")},getDataCount:function(a,b){return t[g[b]][a-1]},makeImpl:function(a,b){this.nCount=this.nVersion*4+17;this.modules=new Array(this.nCount);for(var c=0;c<this.nCount;c++){this.modules[c]=new Array(this.nCount);for(var d=0;d<this.nCount;d++)this.modules[c][d]=null}this.setupPositionProbePattern(0,0);this.setupPositionProbePattern(this.nCount-7,0);this.setupPositionProbePattern(0,this.nCount-7);this.setupPositionAdjustPattern();this.setupTimingPattern();this.setupTypeInfo(a,b);if(this.nVersion>=7)this.setupVersionInfo(a);this.mapData(this.createData(this.nVersion,this.nErrorCorrectLevel,this.qrdata),b)},setupPositionProbePattern:function(a,b){for(var c=-1;c<=7;c++){if(a+c<=-1||this.nCount<=a+c)continue;for(var d=-1;d<=7;d++){if(b+d<=-1||this.nCount<=b+d)continue;if(0<=c&&c<=6&&(d==0||d==6)||0<=d&&d<=6&&(c==0||c==6)||2<=c&&c<=4&&2<=d&&d<=4)this.modules[a+c][b+d]=!0;else this.modules[a+c][b+d]=!1}}},getBestMaskPattern:function(){var a=0,b=0;for(var c=0;c<8;c++){this.makeImpl(!0,c);var d=r.getLostPoint(this);if(c==0||a>d){a=d;b=c}}return b},createMovieClip:function(){},setupTimingPattern:function(){for(var a=8;a<this.nCount-8;a++){if(this.modules[a][6]!=null)continue;this.modules[a][6]=a%2==0}for(var b=8;b<this.nCount-8;b++){if(this.modules[6][b]!=null)continue;this.modules[6][b]=b%2==0}},setupPositionAdjustPattern:function(){var a=s.getPatternPosition(this.nVersion);for(var b=0;b<a.length;b++){for(var c=0;c<a.length;c++){var d=a[b],e=a[c];if(this.modules[d][e]!=null)continue;for(var f=-2;f<=2;f++){for(var g=-2;g<=2;g++){if(f==-2||f==2||g==-2||g==2||f==0&&g==0)this.modules[d+f][e+g]=!0;else this.modules[d+f][e+g]=!1}}}}},setupVersionInfo:function(a){var b=r.getBCHVersion(this.nVersion),c=0;for(var d=0;d<18;d++){var e=!a&&(b>>d&1)==1;this.modules[Math.floor(d/3)][d%3+this.nCount-8-3]=e}for(var f=0;f<18;f++){var g=!a&&(b>>f&1)==1;this.modules[f%3+this.nCount-8-3][Math.floor(f/3)]=g}},setupTypeInfo:function(a,b){var c=this.nErrorCorrectLevel<<3|b,d=r.getBCHTypeInfo(c),e=0;for(var f=0;f<15;f++){var g=!a&&(d>>f&1)==1;if(f<6)this.modules[f][8]=g;else if(f<8)this.modules[f+1][8]=g;else this.modules[this.nCount-15+f][8]=g}for(var h=0;h<15;h++){var i=!a&&(d>>h&1)==1;if(h<8)this.modules[8][this.nCount-h-1]=i;else if(h<9)this.modules[8][15-h-1+1]=i;else this.modules[8][15-h-1]=i}this.modules[this.nCount-8][8]=!a},mapData:function(a,b){var c=-1,d=this.nCount-1,e=7,f=0;for(var g=this.nCount-1;g>0;g-=2){if(g==6)g--;while(!0){for(var h=0;h<2;h++){if(this.modules[d][g-h]==null){var i=!1;if(f<a.length)i=(a[f]>>>e&1)==1;if(r.getMask(b,d,g-h))i=!i;this.modules[d][g-h]=i;e--;if(e==-1){f++;e=7}}}d+=c;if(d<0||this.nCount<=d){d-=c;c=-c;break}}}},createData:function(a,b,c){var e=u.getRSBlocks(a,b),f=new v;f.put(4,4);f.put(c.getLength(a),r.getLengthInBits(4,a));c.write(f);var g=0;for(var h=0;h<e.length;h++)g+=e[h].dataCount;if(f.getLengthInBits()>g*8)throw new Error("code length overflow. ("+f.getLengthInBits()+">"+g*8+")");if(f.getLengthInBits()+4<=g*8)f.put(0,4);while(f.getLengthInBits()%8!=0)f.putBit(!1);while(!0){if(f.getLengthInBits()>=g*8)break;f.put(236,8);if(f.getLengthInBits()>=g*8)break;f.put(17,8)}return this.createBytes(f,e)},createBytes:function(a,b){var c=0,d=0,e=0,f=new Array(b.length),g=new Array(b.length),h=0;for(var i=0;i<b.length;i++){var j=b[i].dataCount,k=b[i].totalCount-j;h=Math.max(h,j);f[i]=new Array(j);for(var l=0;l<f[i].length;l++)f[i][l]=255&a.buffer[c++];g[i]=new Array(k);var m=w.glog(b[i].totalCount-j);var n=u.getErrorCorrectPolynomial(b[i].totalCount-j);var o=new w(f[i],n.getLength()-1);var p=o.mod(n);g[i]=new Array(n.getLength()-1);for(var q=0;q<g[i].length;q++){var r=q+p.getLength()-g[i].length;g[i][q]=r>=0?p.get(r):0}}var s=0;for(var v=0;v<b.length;v++)s+=b[v].totalCount;var x=new Array(s),y=0;for(var z=0;z<h;z++)for(var A=0;A<b.length;A++)if(z<f[A].length)x[y++]=f[A][z];for(var B=0;B<g[0].length;B++)for(var C=0;C<b.length;C++)x[y++]=g[C][B];return x}};var q=function(a){this.data=a};q.prototype={getLength:function(a){return this.getBytes(a).length},write:function(a){var b=this.getBytes();for(var c=0;c<b.length;c++){a.put(b[c],8)}},getBytes:function(){var a=[],b=encodeURIComponent(this.data).split("").map(function(c){var d=c.charCodeAt(0);if(d>127){var e=[];for(var f=0;f<encodeURIComponent(c).replace(/%/g,"").length;f+=2)e.push(parseInt(encodeURIComponent(c).replace(/%/g,"").substr(f,2),16));return e}return[d]});b.forEach(function(c){a=a.concat(c)});return a}};var r={getBCHTypeInfo:function(a){var b=a<<10;while(r.getBCHDigit(b)-r.getBCHDigit(1335)>=0)b^=1335<<r.getBCHDigit(b)-r.getBCHDigit(1335);return(a<<10|b)^21522},getBCHVersion:function(a){var b=a<<12;while(r.getBCHDigit(b)-r.getBCHDigit(7973)>=0)b^=7973<<r.getBCHDigit(b)-r.getBCHDigit(7973);return a<<12|b},getBCHDigit:function(a){var b=0;while(a!=0){b++;a>>>=1}return b},getPatternPosition:function(a){return s.getPatternPosition(a)},getMask:function(a,b,c){switch(a){case h:return(b+c)%2==0;case i:return b%2==0;case j:return c%3==0;case k:return(b+c)%3==0;case l:return(Math.floor(b/2)+Math.floor(c/3))%2==0;case m:return b*c%2+b*c%3==0;case n:return(b*c%2+b*c%3)%2==0;case o:return(b*c%3+(b+c)%2)%2==0}},getLostPoint:function(a){var b=a.nCount,c=0;for(var d=0;d<b;d++){for(var e=0;e<b;e++){var f=0,g=a.modules[d][e];for(var h=-1;h<=1;h++){if(d+h<0||b<=d+h)continue;for(var i=-1;i<=1;i++){if(e+i<0||b<=e+i)continue;if(h==0&&i==0)continue;if(g==a.modules[d+h][e+i])f++}}if(f>5)c+=3+(f-5)}}for(var j=0;j<b-1;j++){for(var k=0;k<b-1;k++){var l=0;if(a.modules[j][k])l++;if(a.modules[j+1][k])l++;if(a.modules[j][k+1])l++;if(a.modules[j+1][k+1])l++;if(l==0||l==4)c+=3}}for(var m=0;m<b;m++){for(var n=0;n<b-6;n++){if(a.modules[m][n]&&!a.modules[m][n+1]&&a.modules[m][n+2]&&a.modules[m][n+3]&&a.modules[m][n+4]&&!a.modules[m][n+5]&&a.modules[m][n+6])c+=40}}for(var o=0;o<b;o++){for(var p=0;p<b-6;p++){if(a.modules[p][o]&&!a.modules[p+1][o]&&a.modules[p+2][o]&&a.modules[p+3][o]&&a.modules[p+4][o]&&!a.modules[p+5][o]&&a.modules[p+6][o])c+=40}}var q=0;for(var r=0;r<b;r++){for(var s=0;s<b;s++){if(a.modules[r][s])q++}}var t=Math.abs(100*q/b/b-50)/5;c+=10*t;return c},getLengthInBits:function(a,b){if(b>=1&&b<10){switch(a){case 1:return 10;case 2:return 9;case 4:return 8;default:throw new Error("mode:"+a)}}else if(b<27){switch(a){case 1:return 12;case 2:return 11;case 4:return 16;default:throw new Error("mode:"+a)}}else if(b<41){switch(a){case 1:return 14;case 2:return 13;case 4:return 16;default:throw new Error("mode:"+a)}}else{throw new Error("type:"+b)}}};var s={getPatternPosition:function(a){return x[a-1]}};var t=[[41,25,17,10],[77,47,32,20],[127,77,53,32],[187,114,78,48],[255,154,106,65],[322,195,134,82],[370,224,154,95],[461,279,192,118],[552,335,230,141],[652,395,271,167],[772,468,321,198],[883,535,367,226],[1022,619,425,262],[1101,667,458,282],[1250,758,520,320],[1408,854,586,361],[1548,938,644,397],[1725,1046,718,442],[1903,1153,792,488],[2061,1249,858,528],[2232,1352,929,572],[2409,1460,1003,618],[2620,1588,1091,672],[2812,1704,1171,721],[3057,1853,1273,784],[3283,1990,1367,842],[3517,2132,1465,902],[3669,2223,1528,940],[3909,2369,1628,1002],[4158,2520,1732,1066],[4417,2677,1840,1132],[4686,2840,1952,1201],[4965,3009,2068,1273],[5253,3183,2188,1347],[5529,3351,2303,1417],[5836,3537,2431,1501],[6153,3729,2563,1587],[6479,3927,2699,1676],[6743,4087,2809,1759],[7089,4296,2953,1854]];var u={getRSBlocks:function(a,b){var c=g[b];var d=v2[c-1][a-1];var e=Math.floor(d/1000000),f=Math.floor(d%1000000/1000),h=d%1000;if(e+f==0)throw new Error("bad rs block @ typeNumber:"+a+"/errorCorrectLevel:"+b);var i=new Array(e+f),j=0;for(var k=0;k<e;k++){i[j]=new x2(Math.floor((h+k)/e)+4*Math.ceil((h+k+f-Math.floor(h/1))/e/1),Math.floor((h+k)/e));j++}for(var l=0;l<f;l++){i[j]=new x2(Math.floor((h+e)/f)+4*Math.ceil((h+e+l-Math.floor(h/1))/f/1)+1,Math.floor((h+e)/f)+1);j++}return i},getErrorCorrectPolynomial:function(a){var b=new w([1],0);for(var c=0;c<a;c++)b=b.multiply(new w([1,w.gexp(c)],0));return b}};var v=function(){this.buffer=[];this.length=0};v.prototype={get:function(a){var b=Math.floor(a/8);return((this.buffer[b]>>>7-a%8)&1)==1},put:function(a,b){for(var c=0;c<b;c++)this.putBit(((a>>>(b-c-1))&1)==1)},getLengthInBits:function(){return this.length},putBit:function(a){var b=Math.floor(this.length/8);if(this.buffer.length<=b)this.buffer.push(0);if(a)this.buffer[b]|=128>>>this.length%8;this.length++}};var w=function(a,b){if(typeof a=="undefined")return;this.num=new Array(a.length+b);for(var c=0;c<this.num.length;c++)this.num[c]=0;for(var d=0;d<a.length;d++)this.num[d+b]=a[d]};w.prototype={get:function(a){return this.num[this.num.length-1-a]},getLength:function(){return this.num.length},multiply:function(a){var b=new w(null,this.getLength()+a.getLength()-1);for(var c=0;c<this.getLength();c++)for(var d=0;d<a.getLength();d++)b.num[c+d]^=w.gexp(w.glog(this.get(c))+w.glog(a.get(d)));return b},mod:function(a){if(this.getLength()-a.getLength()<0)return this;var b=w.glog(this.get(this.getLength()-1))-w.glog(a.get(a.getLength()-1));var c=new w(null,this.getLength());for(var d=0;d<this.getLength();d++)c.num[d]=this.num[d];for(var e=0;e<a.getLength();e++)c.num[c.getLength()-1-e]^=w.gexp(w.glog(a.get(a.getLength()-1-e))+b);return c.mod(a)}};w.glog=function(a){if(a<1)throw new Error("glog("+a+")");return y[a]};w.gexp=function(a){while(a<0)a+=255;while(a>=256)a-=255;return z[a]};var y=[0,0,1,25,2,50,26,198,3,223,51,238,27,104,199,75,4,100,224,14,52,141,239,129,28,193,105,248,200,8,76,113,5,138,101,47,225,36,15,33,53,147,142,218,240,18,130,69,29,181,194,125,106,39,249,185,201,154,9,120,77,228,114,166,6,191,139,98,102,221,48,253,226,152,37,179,16,145,34,136,54,208,148,206,143,150,219,189,241,210,19,92,131,56,70,64,30,66,182,163,195,72,126,110,107,58,40,84,250,133,186,61,202,94,155,159,10,21,121,43,78,212,229,172,115,243,167,87,7,112,192,247,140,128,99,13,103,74,222,237,49,197,254,24,227,165,153,119,38,184,180,124,17,68,146,217,35,32,137,46,55,63,209,91,149,188,207,205,144,135,151,178,220,252,190,97,242,86,211,171,20,42,93,158,132,60,57,83,71,109,65,162,31,45,67,216,183,123,164,118,196,23,73,236,127,12,111,246,108,161,59,82,41,157,85,170,251,96,134,177,187,204,62,90,203,89,95,176,156,169,160,81,11,245,22,235,122,117,44,215,79,174,213,233,230,231,173,232,116,214,244,234,168,80,88,175];var z=[];var A=1;for(var B=0;B<255;B++){z.push(A);A<<=1;if(A&256)A^=285};z.push(z[0]);var x=[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];x[0]=[];x[1]=[6,18];x[2]=[6,22];x[3]=[6,26];x[4]=[6,30];x[5]=[6,34];x[6]=[6,22,38];x[7]=[6,24,42];x[8]=[6,26,46];x[9]=[6,28,50];x[10]=[6,30,54];x[11]=[6,32,58];x[12]=[6,34,62];x[13]=[6,26,46,66];x[14]=[6,26,48,70];x[15]=[6,26,50,74];x[16]=[6,30,54,78];x[17]=[6,30,56,82];x[18]=[6,30,58,86];x[19]=[6,34,62,90];x[20]=[6,28,50,72,94];x[21]=[6,26,50,74,98];x[22]=[6,30,54,78,102];x[23]=[6,28,54,80,106];x[24]=[6,32,58,84,110];x[25]=[6,30,58,86,114];x[26]=[6,34,62,90,118];x[27]=[6,26,50,74,98,122];x[28]=[6,30,54,78,102,126];x[29]=[6,26,52,78,104,130];x[30]=[6,30,56,82,108,134];x[31]=[6,34,60,86,112,138];x[32]=[6,30,58,86,114,142];x[33]=[6,34,62,90,118,146];x[34]=[6,30,54,78,102,126,150];x[35]=[6,24,50,76,102,128,154];x[36]=[6,28,54,80,106,132,158];x[37]=[6,32,58,84,110,136,162];x[38]=[6,26,54,82,110,138,166];x[39]=[6,30,58,86,114,142,170];
+
+var x2=function(a,b){this.totalCount=a;this.dataCount=b};var v2=[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]];
+
+// Draw QR on canvas
+function drawQR(canvas, text) {
+  try {
+    var qr = new p(0, g.M);
+    qr.addData(text);
+    var size = canvas.width;
+    var count = qr.nCount;
+    var cell = Math.floor(size / (count + 4));
+    var offset = Math.floor((size - cell * count) / 2);
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0,0,size,size);
+    ctx.fillStyle = 'black';
+    for(var r=0;r<count;r++){
+      for(var c=0;c<count;c++){
+        if(qr.modules[r][c]){
+          ctx.fillRect(offset+c*cell, offset+r*cell, cell, cell);
+        }
+      }
+    }
+    return true;
+  } catch(e) {
+    return false;
+  }
+}
+window.drawQR = drawQR;
+})();
+</script>
+
+<script>
+// ═══════════════════════════════════════════
+//  STATE & STORAGE
+// ═══════════════════════════════════════════
+const LS_KEY = 'waGen_v2';
+
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch { return {}; }
+}
+
+function saveState(data) {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch {}
+}
+
+let state = loadState();
+let currentUrl = '';
+let generatedCount = state.generatedCount || 0;
+let copiedCount   = state.copiedCount   || 0;
+let history       = state.history       || [];
+
+// ═══════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Restore saved form values
+  if (state.phone)   document.getElementById('phoneNumber').value  = state.phone;
+  if (state.country) document.getElementById('countryCode').value  = state.country;
+  if (state.message) document.getElementById('messageInput').value = state.message;
+  if (state.url)     document.getElementById('urlInput').value     = state.url;
+
+  updateStats();
+  renderHistory();
+  setupEmojis();
+  setupTemplates();
+  updatePreview();
+  updateCharCount();
+
+  // Live preview
+  document.getElementById('messageInput').addEventListener('input', () => {
+    updatePreview();
+    updateCharCount();
+    debounce(saveFormState, 600)();
+  });
+
+  document.getElementById('phoneNumber').addEventListener('input', handlePhoneInput);
+  document.getElementById('countryCode').addEventListener('change', updatePreview);
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey||e.metaKey) && e.key === 'Enter') generateLink();
+    if (e.key === 'Escape') closeShareModal();
+  });
+});
+
+// ═══════════════════════════════════════════
+//  PHONE INPUT
+// ═══════════════════════════════════════════
+function handlePhoneInput(e) {
+  let val = e.target.value.replace(/\D/g,'');
+  const autoFmt = document.getElementById('autoFormat').checked;
+  if (autoFmt) {
+    // Remove leading 0
+    val = val.replace(/^0+/, '');
+  }
+  e.target.value = val;
+  updatePhoneProgress(val);
+  updatePreview();
+  debounce(saveFormState, 600)();
+}
+
+function updatePhoneProgress(val) {
+  const fill = document.getElementById('phoneProgress');
+  const pct = Math.min((val.length / 9) * 100, 100);
+  fill.style.width = pct + '%';
+}
+
+// ═══════════════════════════════════════════
+//  CHAR COUNT
+// ═══════════════════════════════════════════
+function updateCharCount() {
+  const el  = document.getElementById('charCount');
+  const len = document.getElementById('messageInput').value.length;
+  el.textContent = len + ' / 4096';
+  el.className = 'char-count' + (len > 3800 ? ' danger' : len > 3000 ? ' warning' : '');
+}
+
+// ═══════════════════════════════════════════
+//  TEXT FORMATTING
+// ═══════════════════════════════════════════
+function wrapText(before, after) {
+  const ta = document.getElementById('messageInput');
+  const s  = ta.selectionStart, e = ta.selectionEnd;
+  const val = ta.value;
+  const sel = val.substring(s, e) || 'نص هنا';
+  ta.value = val.substring(0, s) + before + sel + after + val.substring(e);
+  ta.selectionStart = s + before.length;
+  ta.selectionEnd   = e + before.length;
+  ta.focus();
+  updatePreview();
+  updateCharCount();
+}
+
+function insertText(txt) {
+  const ta = document.getElementById('messageInput');
+  const s  = ta.selectionStart;
+  const val = ta.value;
+  ta.value = val.substring(0, s) + txt + val.substring(s);
+  ta.selectionStart = ta.selectionEnd = s + txt.length;
+  ta.focus();
+  updatePreview();
+  updateCharCount();
+}
+
+function clearMessage() {
+  if (!confirm('هل أنت متأكد من مسح الرسالة؟')) return;
+  document.getElementById('messageInput').value = '';
+  updatePreview();
+  updateCharCount();
+}
+
+// ═══════════════════════════════════════════
+//  EMOJI PANEL
+// ═══════════════════════════════════════════
+const EMOJIS = ['😀','😃','😄','😁','😆','😅','😂','🤣','😊','😇','🥰','😍','🤩','😘','😗','☺️','😙','😚','🙂','🤗','🤭','🤫','🤔','🤐','🤨','😐','😑','😶','😏','😒','🙄','😬','🤥','😌','😔','😪','🤤','😴','😷','🤒','🤕','🤢','🤧','🥵','🥶','🥴','😵','🤯','🤠','🥳','😎','🤓','🧐','😕','😟','🙁','☹️','😮','😯','😲','😳','🥺','😦','😧','😨','😰','😥','😢','😭','😱','😖','😣','😞','😓','😩','😫','🥱','😤','😡','😠','🤬','😈','👿','💀','☠️','💩','🤡','👹','👺','👻','👽','👾','🤖','😺','😸','😹','😻','😼','😽','🙀','😿','😾','👋','🤚','🖐','✋','🖖','👌','🤌','🤏','✌️','🤞','🤟','🤘','🤙','👈','👉','👆','🖕','👇','☝️','👍','👎','✊','👊','🤛','🤜','👏','🙌','🫶','👐','🤲','🤝','🙏','❤️','🧡','💛','💚','💙','💜','🖤','🤍','🤎','❤️‍🔥','💔','❣️','💕','💞','💓','💗','💖','💘','💝','💟','🔥','✨','⭐','🌟','💥','🎉','🎊','🎈','🏆','🥇','💯','✅','❌','🚀','💡','📌','🔔','📱','💬','📞','🌹','🌺','💐'];
+
+function setupEmojis() {
+  const panel = document.getElementById('emojiPanel');
+  EMOJIS.forEach(em => {
+    const btn = document.createElement('span');
+    btn.className = 'emoji-item';
+    btn.textContent = em;
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('tabindex', '0');
+    btn.setAttribute('aria-label', 'إضافة ' + em);
+    btn.onclick = () => { insertText(em); };
+    btn.onkeydown = e => { if (e.key === 'Enter') insertText(em); };
+    panel.appendChild(btn);
+  });
+}
+
+function toggleEmoji() {
+  const panel = document.getElementById('emojiPanel');
+  const btn   = document.getElementById('emojiToggle');
+  const open  = panel.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+
+// ═══════════════════════════════════════════
+//  TEMPLATES
+// ═══════════════════════════════════════════
+const TEMPLATES = [
+  { label: '👋 ترحيب', msg: 'السلام عليكم! أهلاً بك 😊\nنحن سعداء بتواصلك معنا.\nكيف يمكننا مساعدتك اليوم؟' },
+
+];
+
+function setupTemplates() {
+  const grid = document.getElementById('templatesGrid');
+  TEMPLATES.forEach(tpl => {
+    const btn = document.createElement('button');
+    btn.className = 'tpl-btn';
+    btn.textContent = tpl.label;
+    btn.setAttribute('aria-label', 'استخدام قالب: ' + tpl.label);
+    btn.onclick = () => {
+      document.getElementById('messageInput').value = tpl.msg;
+      updatePreview();
+      updateCharCount();
+      // Switch to compose tab
+      switchTab('compose');
+      showToast('تم تطبيق القالب', 'success');
+    };
+    grid.appendChild(btn);
+  });
+}
+
+// ═══════════════════════════════════════════
+//  TABS
+// ═══════════════════════════════════════════
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+});
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === name);
+    t.setAttribute('aria-selected', t.dataset.tab === name);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('active', p.id === name + '-panel');
+  });
+}
+
+// ═══════════════════════════════════════════
+//  UTM
+// ═══════════════════════════════════════════
+function toggleUTM() {
+  const panel = document.getElementById('utmPanel');
+  const btn   = document.getElementById('utmToggle');
+  const caret = document.getElementById('utmCaret');
+  const open  = panel.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+  caret.className = open ? 'ph ph-caret-up' : 'ph ph-caret-down';
+}
+
+// ═══════════════════════════════════════════
+//  WHATSAPP TEXT FORMATTER (for preview)
+// ═══════════════════════════════════════════
+function formatWAText(text) {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/```([\s\S]*?)```/g, '<pre>$1</pre>')
+    .replace(/`([^`\n]+)`/g, '<code>$1</code>')
+    .replace(/\*([^*\n]+)\*/g, '<b>$1</b>')
+    .replace(/_([^_\n]+)_/g,   '<i>$1</i>')
+    .replace(/~([^~\n]+)~/g,   '<s>$1</s>')
+    .replace(/\n/g, '<br>');
+}
+
+// ═══════════════════════════════════════════
+//  PREVIEW UPDATE
+// ═══════════════════════════════════════════
+function updatePreview() {
+  const msg     = document.getElementById('messageInput').value;
+  const code    = document.getElementById('countryCode').value;
+  const phone   = document.getElementById('phoneNumber').value;
+  const chatBody = document.getElementById('chatBody');
+  const empty    = document.getElementById('emptyState');
+  const prevPhone = document.getElementById('previewPhone');
+
+  // Update phone display
+  if (phone) {
+    prevPhone.textContent = '+' + code + ' ' + phone;
+  } else {
+    prevPhone.textContent = '+' + code + ' ···';
+  }
+
+  if (!msg.trim()) {
+    chatBody.innerHTML = '';
+    chatBody.appendChild(empty);
+    return;
+  }
+
+  const now = new Date();
+  const time = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+
+  chatBody.innerHTML = `
+    <div class="wa-bubble">
+      ${formatWAText(msg)}
+      <div class="wa-bubble-time">
+        ${time}
+        <svg viewBox="0 0 16 15" aria-hidden="true"><path d="M15.01 3.316l-.478-.372a.365.365 0 00-.51.063L8.666 9.879a.32.32 0 01-.484.033l-.358-.325a.319.319 0 00-.484.033l-.378.483a.418.418 0 00.036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 00-.064-.51zm-4.1 0l-.478-.372a.365.365 0 00-.51.063L4.566 9.879a.32.32 0 01-.484.033L1.891 7.769a.366.366 0 00-.515.006l-.423.433a.364.364 0 00.006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 00-.063-.51z"/></svg>
+      </div>
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════
+//  GENERATE LINK
+// ═══════════════════════════════════════════
+function generateLink() {
+  const code  = document.getElementById('countryCode').value;
+  const phone = document.getElementById('phoneNumber').value.replace(/\D/g,'');
+  const msg   = document.getElementById('messageInput').value.trim();
+  const urlIn = document.getElementById('urlInput').value.trim();
+  const useWaMe = document.getElementById('useWaMe').checked;
+
+  if (!phone) {
+    showToast('الرجاء إدخال رقم الهاتف', 'error');
+    document.getElementById('phoneNumber').focus();
+    return;
+  }
+
+  if (phone.length < 7 || phone.length > 15) {
+    showToast('رقم الهاتف غير صحيح', 'error');
+    return;
+  }
+
+  const fullPhone = code + phone;
+
+  // Build message
+  let fullMsg = msg;
+  if (urlIn) {
+    // Append UTM to URL if set
+    let finalUrl = urlIn;
+    const src  = document.getElementById('utmSource').value.trim();
+    const med  = document.getElementById('utmMedium').value.trim();
+    const camp = document.getElementById('utmCampaign').value.trim();
+    const cont = document.getElementById('utmContent').value.trim();
+
+    if (src || med || camp || cont) {
+      const url = new URL(finalUrl.startsWith('http') ? finalUrl : 'https://' + finalUrl);
+      if (src)  url.searchParams.set('utm_source',   src);
+      if (med)  url.searchParams.set('utm_medium',   med);
+      if (camp) url.searchParams.set('utm_campaign', camp);
+      if (cont) url.searchParams.set('utm_content',  cont);
+      finalUrl = url.toString();
+    }
+    fullMsg = (fullMsg ? fullMsg + '\n\n' : '') + finalUrl;
+  }
+
+  // Build URL
+  const base = useWaMe
+    ? `https://wa.me/${fullPhone}`
+    : `https://api.whatsapp.com/send?phone=${fullPhone}`;
+
+  currentUrl = base + (fullMsg ? (useWaMe ? '?' : '&') + 'text=' + encodeURIComponent(fullMsg) : '');
+
+  // Show output
+  document.getElementById('outputUrl').textContent = currentUrl;
+  const sec = document.getElementById('outputSection');
+  sec.classList.add('visible');
+  sec.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  // Stats
+  generatedCount++;
+  saveFormState();
+  updateStats();
+
+  // History
+  addToHistory(fullPhone, msg || urlIn);
+
+  // Draw QR if visible
+  if (document.getElementById('qrSection').classList.contains('visible')) {
+    renderQR();
+  }
+
+  // Remove pulse after first generation
+  document.getElementById('generateBtn').classList.remove('pulse');
+
+  showToast('تم إنشاء الرابط بنجاح! ✓', 'success');
+}
+
+// ═══════════════════════════════════════════
+//  QR
+// ═══════════════════════════════════════════
+function toggleQR() {
+  const sec = document.getElementById('qrSection');
+  const vis = sec.classList.toggle('visible');
+  if (vis && currentUrl) renderQR();
+}
+
+function renderQR() {
+  const canvas = document.getElementById('qrCanvas');
+  if (typeof drawQR === 'function') {
+    const ok = drawQR(canvas, currentUrl);
+    if (!ok) {
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0,0,180,180);
+      ctx.fillStyle = '#333';
+      ctx.font = '12px sans-serif';
+      ctx.fillText('QR unavailable', 20, 90);
+    }
+  }
+}
+
+function downloadQR() {
+  const canvas = document.getElementById('qrCanvas');
+  const a = document.createElement('a');
+  a.download = 'whatsapp-qr.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  showToast('تم تحميل رمز QR', 'success');
+}
+
+// ═══════════════════════════════════════════
+//  COPY & SHARE
+// ═══════════════════════════════════════════
+async function copyLink() {
+  if (!currentUrl) return showToast('أنشئ الرابط أولاً', 'error');
+  try {
+    await navigator.clipboard.writeText(currentUrl);
+    copiedCount++;
+    saveFormState();
+    updateStats();
+    showToast('تم نسخ الرابط ✓', 'success');
+  } catch {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = currentUrl;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('تم نسخ الرابط ✓', 'success');
+  }
+}
+
+function openLink() {
+  if (!currentUrl) return showToast('أنشئ الرابط أولاً', 'error');
+  window.open(currentUrl, '_blank', 'noopener');
+}
+
+function openShareModal() {
+  if (!currentUrl) return showToast('أنشئ الرابط أولاً', 'error');
+  document.getElementById('shareModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeShareModal() {
+  document.getElementById('shareModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOnBg(e) {
+  if (e.target.id === 'shareModal') closeShareModal();
+}
+
+function shareVia(platform) {
+  const url  = encodeURIComponent(currentUrl);
+  const text = encodeURIComponent('تحقق من هذا الرابط: ' + currentUrl);
+  const urls = {
+    whatsapp:  `https://wa.me/?text=${text}`,
+    telegram:  `https://t.me/share/url?url=${url}&text=${encodeURIComponent('رابط واتساب مخصص')}`,
+    twitter:   `https://twitter.com/intent/tweet?text=${text}`,
+    facebook:  `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    linkedin:  `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+    email:     `mailto:?subject=${encodeURIComponent('رابط واتساب')}&body=${text}`,
+    sms:       `sms:?body=${text}`,
+  };
+  if (urls[platform]) window.open(urls[platform], '_blank', 'noopener');
+  closeShareModal();
+}
+
+async function nativeShare() {
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: 'رابط واتساب', text: 'تحقق من هذا الرابط', url: currentUrl });
+    } catch {}
+  } else {
+    copyLink();
+  }
+  closeShareModal();
+}
+
+// ═══════════════════════════════════════════
+//  HISTORY
+// ═══════════════════════════════════════════
+function addToHistory(phone, msg) {
+  const item = { phone, msg: msg.substring(0,60), url: currentUrl, ts: Date.now() };
+  history = history.filter(h => h.url !== currentUrl); // dedup
+  history.unshift(item);
+  if (history.length > 20) history.pop();
+  saveFormState();
+  renderHistory();
+}
+
+function renderHistory() {
+  const list = document.getElementById('historyList');
+  document.getElementById('historyCount').textContent = history.length;
+
+  if (!history.length) {
+    list.innerHTML = `<div class="empty-history"><i class="ph ph-hourglass-simple" aria-hidden="true"></i><p>لا يوجد سجل بعد</p></div>`;
+    return;
+  }
+
+  list.innerHTML = history.map((h, i) => `
+    <div class="history-item" onclick="loadHistory(${i})" role="listitem" tabindex="0"
+      aria-label="تحميل رابط ${h.phone}"
+      onkeydown="if(event.key==='Enter')loadHistory(${i})">
+      <span class="history-phone">+${h.phone}</span>
+      <span class="history-msg">${h.msg || '—'}</span>
+      <button class="history-del" onclick="event.stopPropagation();deleteHistory(${i})"
+        aria-label="حذف هذا السجل">✕</button>
+    </div>
+  `).join('');
+}
+
+function loadHistory(idx) {
+  const h = history[idx];
+  if (!h) return;
+  // Extract phone parts
+  const phoneFull = h.phone;
+  // Try to match country code
+  const countryCodes = ['966','971','974','965','968','973','962','961','20','218','216','213','212','249','967','1','44','49','33','91','92','90'];
+  let matched = false;
+  for (const cc of countryCodes.sort((a,b) => b.length-a.length)) {
+    if (phoneFull.startsWith(cc)) {
+      document.getElementById('countryCode').value = cc;
+      document.getElementById('phoneNumber').value  = phoneFull.slice(cc.length);
+      matched = true;
+      break;
+    }
+  }
+  if (!matched) document.getElementById('phoneNumber').value = phoneFull;
+
+  currentUrl = h.url;
+  document.getElementById('outputUrl').textContent = h.url;
+  document.getElementById('outputSection').classList.add('visible');
+  showToast('تم تحميل الرابط من السجل', 'success');
+}
+
+function deleteHistory(idx) {
+  history.splice(idx, 1);
+  saveFormState();
+  renderHistory();
+}
+
+function clearHistory() {
+  if (!history.length) return;
+  if (!confirm('هل أنت متأكد من مسح جميع السجلات؟')) return;
+  history = [];
+  saveFormState();
+  renderHistory();
+  showToast('تم مسح السجل', 'success');
+}
+
+// ═══════════════════════════════════════════
+//  STATS
+// ═══════════════════════════════════════════
+function updateStats() {
+  animateNum('totalGenerated', generatedCount);
+  animateNum('historyCount', history.length);
+  animateNum('totalCopied', copiedCount);
+}
+
+function animateNum(id, target) {
+  const el = document.getElementById(id);
+  const current = parseInt(el.textContent) || 0;
+  if (current === target) return;
+  const step = Math.ceil(Math.abs(target - current) / 20);
+  let val = current;
+  const timer = setInterval(() => {
+    val += (target > current ? step : -step);
+    if ((target > current && val >= target) || (target < current && val <= target)) {
+      val = target;
+      clearInterval(timer);
+    }
+    el.textContent = val;
+  }, 30);
+}
+
+// ═══════════════════════════════════════════
+//  SAVE STATE
+// ═══════════════════════════════════════════
+function saveFormState() {
+  state = {
+    phone: document.getElementById('phoneNumber').value,
+    country: document.getElementById('countryCode').value,
+    message: document.getElementById('messageInput').value,
+    url: document.getElementById('urlInput').value,
+    generatedCount,
+    copiedCount,
+    history,
+  };
+  saveState(state);
+}
+
+// ═══════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════
+function showToast(msg, type = 'success') {
+  const container = document.getElementById('toastContainer');
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.innerHTML = `<i class="ph ph-${type === 'success' ? 'check-circle' : 'warning-circle'}" aria-hidden="true"></i> ${msg}`;
+  toast.setAttribute('role', 'status');
+  container.appendChild(toast);
+  setTimeout(() => { toast.remove(); }, 2600);
+}
+
+// ═══════════════════════════════════════════
+//  DEBOUNCE
+// ═══════════════════════════════════════════
+const timers = {};
+function debounce(fn, delay) {
+  return function(...args) {
+    clearTimeout(timers[fn]);
+    timers[fn] = setTimeout(() => fn(...args), delay);
+  };
+}
+</script>
+</body>
+</html>
